@@ -7,9 +7,9 @@ import { addProduct } from "@/store/reducers/cart";
 import { toggleFavProduct } from "@/store/reducers/user";
 import type { ProductStoreType, ProductType } from "@/types";
 
-import productsColors from "../../../utils/data/products-colors";
-import productsSizes from "../../../utils/data/products-sizes";
-import CheckboxColor from "../../products-filter/form-builder/checkbox-color";
+// import productsColors from "../../../utils/data/products-colors";
+// import productsSizes from "../../../utils/data/products-sizes";
+// import CheckboxColor from "../../products-filter/form-builder/checkbox-color";
 
 type ProductContent = {
   product: ProductType;
@@ -21,9 +21,9 @@ const Content = ({ product }: ProductContent) => {
   const [color, setColor] = useState<string>("");
   const [itemSize, setItemSize] = useState<string>("");
 
-  const onColorSet = (e: string) => setColor(e);
-  const onSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) =>
-    setItemSize(e.target.value);
+  // const onColorSet = (e: string) => setColor(e);
+  // const onSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) =>
+  //   setItemSize(e.target.value);
 
   const { favProducts } = useSelector((state: RootState) => state.user);
   const isFavourite = some(
