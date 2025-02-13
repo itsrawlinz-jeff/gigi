@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import useOnClickOutside from "use-onclickoutside";
 
-// import type { RootState } from "@/store";
+import type { RootState } from "@/store";
 
 import Logo from "../../assets/icons/logo";
 
@@ -14,7 +14,7 @@ type HeaderType = {
 
 const Header = ({ isErrorPage }: HeaderType) => {
   const router = useRouter();
-  // const { cartItems } = useSelector((state: RootState) => state.cart);
+  const { cartItems } = useSelector((state: RootState) => state.cart);
   const arrayPaths = ["/"];
 
   const [onTop, setOnTop] = useState(
@@ -70,8 +70,8 @@ const Header = ({ isErrorPage }: HeaderType) => {
           className={`site-nav ${menuOpen ? "site-nav--open" : ""}`}
         >
           <Link href="/products">Our Cakes Catalogue(Choose & Place and Order)</Link>
-          {/* <a href="#">Inspiration</a>
-          <a href="#">Rooms</a> */}
+           <a href="#">Inspiration</a>
+          <a href="#">Rooms</a> 
           <button className="site-nav__btn">
             <p>Account</p>
           </button>
@@ -98,27 +98,27 @@ const Header = ({ isErrorPage }: HeaderType) => {
               className="icon-search"
             />
           </button>
-          {/* <Link href="/cart" legacyBehavior>
+          <Link href="/cart" legacyBehavior>
             <button className="btn-cart">
               <i className="icon-cart" />
               {cartItems.length > 0 && (
                 <span className="btn-cart__count">{cartItems.length}</span>
               )}
             </button>
-          </Link> */}
-          {/* <Link href="/login" legacyBehavior>
+          </Link> 
+         <Link href="/login" legacyBehavior>
             <button className="site-header__btn-avatar">
               <i className="icon-avatar" />
             </button>
-          </Link> */}
-          {/* <button
+          </Link> 
+           <button
             onClick={() => setMenuOpen(true)}
             className="site-header__btn-menu"
           >
             <i className="btn-hamburger">
               <span />
             </i>
-          </button> */}
+          </button> 
         </div>
       </div>
     </header>
