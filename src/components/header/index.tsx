@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 import useOnClickOutside from "use-onclickoutside";
 
-import type { RootState } from "@/store";
+// import type { RootState } from "@/store";
 
 import Logo from "../../assets/icons/logo";
 
@@ -14,7 +14,7 @@ type HeaderType = {
 
 const Header = ({ isErrorPage }: HeaderType) => {
   const router = useRouter();
-  const { cartItems } = useSelector((state: RootState) => state.cart);
+  // const { cartItems } = useSelector((state: RootState) => state.cart);
   const arrayPaths = ["/"];
 
   const [onTop, setOnTop] = useState(
