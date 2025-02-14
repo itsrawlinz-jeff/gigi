@@ -70,7 +70,7 @@ const Header = ({ isErrorPage }: HeaderType) => {
           className={`site-nav ${menuOpen ? "site-nav--open" : ""}`}
         >
           <Link href="/products">Our Cakes Catalogue(Choose & Place and Order)</Link>
-           <a href="#">Inspiration</a>
+          <a href="#">Inspiration</a>
           <a href="#">Rooms</a> 
           <button className="site-nav__btn">
             <p>Account</p>
@@ -98,7 +98,7 @@ const Header = ({ isErrorPage }: HeaderType) => {
               className="icon-search"
             />
           </button>
-          <Link href="/cart" legacyBehavior>
+           <Link href="/cart" legacyBehavior>
             <button className="btn-cart">
               <i className="icon-cart" />
               {cartItems.length > 0 && (
@@ -106,19 +106,19 @@ const Header = ({ isErrorPage }: HeaderType) => {
               )}
             </button>
           </Link> 
-         <Link href="/login" legacyBehavior>
+          { <Link href="/login" legacyBehavior>
             <button className="site-header__btn-avatar">
               <i className="icon-avatar" />
             </button>
-          </Link> 
-           <button
+          </Link> }
+          {<button
             onClick={() => setMenuOpen(true)}
             className="site-header__btn-menu"
           >
             <i className="btn-hamburger">
               <span />
             </i>
-          </button> 
+          </button>}
         </div>
       </div>
     </header>
